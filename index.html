@@ -3,9 +3,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Weather Dashboard</title>
 </head>
 <body>
+    <header>
+        <h1>Weather Dashboard</h1>
+
+    </header>
+    <div>
+        <p>Search for a City:</p>
+    </div>
     
 </body>
 </html>
+
+
+<!-- Acceptance Criteria:
+GIVEN a weather dashboard with form inputs
+WHEN I search for a city
+THEN I am presented with current and future conditions for that city and that city is added to the search history
+WHEN I view current weather conditions for that city
+THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, and the the wind speed
+WHEN I view future weather conditions for that city
+THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, the wind speed, and the humidity
+WHEN I click on a city in the search history
+THEN I am again presented with current and future conditions for that city
+
+Psuedo Code:
+
+Create Form Input for user to enter City
+Create a submit button with an event listener for click
+Search Form needs to reference Weather API - coordinates need to match with city name
+
+Create a current weather cond card where results of search produce requested info:
+weather conditions, temp, humidity, and wind speed
+
+Create a set of cards that represent Future weather conditions for lat & lon of requested city
+Need 5 of these for 5 day future forecast that display date, an icon representing weather cond, temp, wind spped and humidity
+
+Save searches to local history - create a drop down or card that stores past cities searched and have these clickable
+
+ -->
