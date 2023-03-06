@@ -7,7 +7,7 @@ var repoSearchTerm = document.querySelector('#repo-search-term');
 var formSubmitHandler = function (event) {
   event.preventDefault();
 
-  var username = nameInputEl.value.trim();
+  var location = nameInputEl.value.trim();
 
   if (username) {
     getUserRepos(username);
@@ -29,15 +29,16 @@ var buttonClickHandler = function (event) {
   }
 };
 
-var getLocation = function (location) {
+var getLocation = function (locationEl) {
   var apiUrl = 'http://api.openweathermap.org/geo/1.0/direct?q={city name},{state code},{country code}&limit={limit}&appid={2c69c6f3e98dcbf764bb60ef32982230'
+console.log
 }
 
   fetch(apiUrl) {
     .then(function (response) {
       if (response.ok) {
-        response.json().then(function (data) {
-          displayRepos(data, user);
+        response.json().then(function (name) {
+          displayRepos(name, user);
         });
       } else {
         alert('Error: ' + response.statusText);
@@ -61,7 +62,7 @@ var getWeather = function (weatherCurrent) {
       alert('Error: ' + response.statusText);
     }
   });
-};
+
 
 var displayRepos = function (repos, searchTerm) {
   if (repos.length === 0) {
